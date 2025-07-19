@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package TaskManager;
+
+service TaskService {
+  rpc CreateTask (AddTaskRequest) returns (Task);
+  rpc GetTasks (Empty) returns (TaskList);
+  rpc MarkDone (TaskId) returns (Task);
+  rpc DeleteTask (TaskId) returns (Empty);
+}
+
+enum TaskStatus {
+    pending = 1;
+    inProgress = 2;
+    completed = 3;
+}
+
+message AddTaskRequest {
+  string title = 1;
+}
+
+message Task {
+  int32 id = 1;
+  string title = 2;
+  TaskStatus status = 3;
+}
+
+message TaskId {
+  int32 id = 1;
+}
+
+message TaskList {
+  repeated Task tasks = 1;
+}
+
+message Empty {}

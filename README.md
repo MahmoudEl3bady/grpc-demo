@@ -4,7 +4,7 @@ A practical demonstration of gRPC (Remote Procedure Call) implementation using N
 
 ## What This Demo Shows
 
-This project demonstrates how to build gRPC services in Node.js by implementing a simple client-server architecture. You'll learn how to define services using Protocol Buffers, handle RPC calls, and establish efficient communication between Node.js applications.
+This project demonstrates how to build gRPC services in Node.js by implementing a simple client-server architecture. Define services using Protocol Buffers, handle RPC calls, and establish efficient communication between Node.js applications.
 
 ## Getting Started
 
